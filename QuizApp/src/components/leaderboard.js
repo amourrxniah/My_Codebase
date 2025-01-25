@@ -1,7 +1,6 @@
 import React from "react";
 
-function Leaderboard({ restartQuiz }) {
-    return (
+const Leaderboard = ({ leaderboard }) => (
     <div id="leaderboard-section" className="section">
         <h2>LeaderBoard</h2>
         <table id="leaderboard">
@@ -12,11 +11,18 @@ function Leaderboard({ restartQuiz }) {
                     <th>Score</th>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+                {leaderboard.map((entry, index) => (
+                    <tr key={index}>
+                        <td>{index + 1}</td>
+                        <td>{entry.name}</td>
+                        <td>{entry.score}</td>
+                    </tr>
+                ))}
+            </tbody>
         </table>
-        <button onClick={restartQuiz} className="primary-btn">Restart</button>
+        <button className="primar-btn">Restart</button>
         </div>
     );
-}
 
 export default Leaderboard;
