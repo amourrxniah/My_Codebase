@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- welcome screen -->
+      <div id="welcome-section">
+        <h1>Welcome to the Quiz App!</h1>
+        <p>
+          Test your knowledge in Science with different levels of difficulty!
+        </p>
+        <button id="start-quiz-btn" class="primary-btn">Start Quiz</button>
+        <button id="view-leaderboard-btn" class="secondary-btn">
+          View LeaderBoard
+        </button>
+      </div>
+
+      <!-- difficulty section -->
+      <div id="difficulty-section" class="section" style="display: none">
+        <h1>Select Difficulty</h1>
+        <button id="easy-btn" class="difficulty-btn">Easy</button>
+        <button id="medium-btn" class="difficulty-btn">Medium</button>
+        <button id="hard-btn" class="difficulty-btn">Hard</button>
+      </div>
+
+      <!-- quiz section -->
+      <div id="quiz-section" class="section" style="display: none">
+        <!-- timer and progress -->
+        <div id="quiz-timer" class="timer-circle">
+          <svg
+            class="timer-svg"
+            viewBox="0 0 36 36"
+            xmlns="http://www,w3.org/2000/svg"
+          >
+            <path
+              class="timer-background"
+              d="M18 2.0845
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831"
+              fill="none"
+              stroke="#ddd"
+              stroke-width="2"
+            ></path>
+            <path
+              class="timer-progress"
+              d="M18 2.0845
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831"
+              fill="none"
+              stroke="#e74c3c"
+              stroke-width="2"
+              stroke-dasharray="100, 100"
+              stroke-dashoffset="100"
+            ></path>
+          </svg>
+          <div class="timer-text"></div>
+        </div>
+        <div id="progress-tracker"></div>
+
+        <h2 id="category"></h2>
+        <h3 id="difficulty"></h3>
+        <p id="question" class="question-text"></p>
+        <div id="options" class="options-container"></div>
+
+        <div class="quiz-controls">
+          <button id="home-btn" class="secondary-btn">Home</button>
+          <button id="back-btn" class="secondary-btn">Back</button>
+          <button id="next-btn" class="primary-btn">Next</button>
+        </div>
+      </div>
+
+      <!-- warning popup -->
+       <div id="exit-warning" class="modal" style="display: none">
+        <div class="modal-content1">
+          <h2>Are you sure you want to exit?</h2>
+          <button id="exit-yes-btn" class="primary-btn">YES</button>
+          <button id="exit-no-btn" class="secondary-btn">NO</button>
+        </div>
+       </div>
+
+      <!-- leaderboard section -->
+      <div id="leaderboard-section" class="section" style="display: none">
+        <h2>LeaderBoard</h2>
+        <table id="leaderboard">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Name</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- leaderboard inserted here -->
+          </tbody>
+        </table>
+        <button id="restart-btn" class="primary-btn">Restart</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

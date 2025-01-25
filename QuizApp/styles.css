@@ -1,0 +1,262 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: linear-gradient(to right, #d9a7c7, #fffcdc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* main app container */
+#app {
+    width: 95%;
+    max-width: 750px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+/* section styles */
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* buttons */
+button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.primary-btn {
+    background: #8e44ad;
+    color: #fff;
+    font-weight: bold;
+}
+
+.primary-btn:hover {
+    background: #732d91;
+}
+
+.secondary-btn {
+    background: #3498db;
+    color: #fff;
+    font-weight: bold;
+}
+
+.secondary-btn:hover {
+    background: #217dbb;
+}
+
+.quiz-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* timer */
+.timer-circle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+/* svg timer */
+.timer-svg {
+    transform: rotate(-90deg);
+    width: 100%;
+    height: 100%;
+}
+
+.timer-background {
+    stroke: #ddd;
+}
+
+.timer-progress {
+    stroke: #e74c3c;
+    transition: stroke-dashoffset 1s linear;
+}
+
+.timer-text {
+    position: absolute;
+    font-weight: bold;
+    color: #333;
+    z-index: 2;
+}
+
+/* positioning for buttons */
+#home-btn {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+}
+
+#back-btn {
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+}
+
+#next-btn {
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+}
+
+.difficulty-btn {
+    background: #ff6161;
+    color: #fff;
+}
+
+.difficulty-btn:hover {
+    background: #e25850;
+}
+
+/* quiz section */
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.question-text {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #6c3483;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #8e44ad;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* answer button styling */
+.option-btn {
+    background: #f7cac9;
+    color: #333;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.option-btn:hover {
+    background: #ffb6c1;
+}
+
+/* highlight answer */
+.option-btn.selected {
+    background: #ff69b4;
+    color: #000;
+    font-weight: bold;
+}
+
+/* leadership styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #f3e5f5;
+}
+
+th,td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background: #8e44ad;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+/* progress tracker */
+#progress-tracker {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 20px;
+}
+
+/* modal for name input */
+#name-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+#name-input {
+    padding: 15px;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    width: 85%;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+/* warning modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content1 {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
