@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #a8dadc, #f4a261, #e76f51);
+    color: #264653;
+}
+
+header {
+    background: #457b9d;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* nav link */
+nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #f4a261;
+}
+
+/* button */
+button {
+    background: #e9c46a;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #f4a261;
+}
